@@ -39,7 +39,7 @@ for (j in 1:length(all_files)){
   # CONCATENATE FILENAME
   filename <- paste(path_out, unlist(tables[j,1]), '.csv', sep='')
   # WRITE CSV INCLUDING COLUMN NAMES (NOT REALLY REQUIRED), DOUBLE QUOTES AND EXCLUDING ROW NAMES/NUMBERS
-  write.csv(x = all_files[[j]], file = filename, row.names = F, col.names = T, quote = T)
+  write.csv(x = all_files[[j]], file = filename, row.names = F, col.names = T, quote = T, na = '')
 }
 
 
