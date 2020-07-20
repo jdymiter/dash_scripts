@@ -38,8 +38,8 @@ path_out <- 'Z:/123/Project data/'
 for (j in 1:length(all_files)){
   # CONCATENATE FILENAME
   filename <- paste(path_out, unlist(tables[j,1]), '.csv', sep='')
-  # WRITE CSV INCLUDING COLUMN NAMES (NOT REALLY REQUIRED), DOUBLE QUOTES AND EXCLUDING ROW NAMES/NUMBERS
-  write.csv(x = all_files[[j]], file = filename, row.names = F, col.names = T, quote = T, na = '')
+  # WRITE CSV FORCING DOUBLE QUOTES, EXCLUDING ROW NAMES/NUMBERS AND REMOVING NAs
+  write.csv(x = all_files[[j]], file = filename, row.names = F, quote = T, na = '')
 }
 
 
